@@ -1,5 +1,5 @@
-// this is a Formatter for all kinds of structs
-package Formatter
+// formatter lib
+package formatter
 
 import (
 	"fmt"
@@ -61,9 +61,8 @@ func Format(a interface{}) {
 		pop()
 		fmt.Printf("%s}\n", strings.Repeat(" ", sz))
 	} else if reflect.TypeOf(a).Kind() == reflect.String {
-        fmt.Printf("%s\"%v\",\n",strings.Repeat(" ",sz),a)
-    } else {
+		fmt.Printf("%s\"%v\",\n", strings.Repeat(" ", sz), a)
+	} else {
 		fmt.Printf("%s%v,\n", strings.Repeat(" ", sz), a)
 	}
 }
-
