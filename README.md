@@ -6,7 +6,7 @@ json-like formatting for node like data structures .
 
 usage: 
 
-```go`
+```
 type Node struct {
 	Data int
 	Name string
